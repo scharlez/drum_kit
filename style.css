@@ -1,6 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=DynaPuff&display=swap');
+
+
 html {
   font-size: 10px;
-  background: url('./background.jpg') bottom center;
+  background: url('./lionbabe3.jpeg') bottom center;
   background-size: cover;
 }
 
@@ -23,19 +26,20 @@ body,html {
   border-radius: .5rem;
   margin: 1rem;
   font-size: 1.5rem;
+  font-family: 'DynaPuff', cursive;
   padding: 1rem .5rem;
   transition: all .07s ease;
   width: 10rem;
   text-align: center;
-  color: white;
+  color: #53BF9D;
   background: rgba(0,0,0,0.4);
   text-shadow: 0 0 .5rem black;
 }
 
 .playing {
   transform: scale(1.1);
-  border-color: #ffc600;
-  box-shadow: 0 0 1rem #ffc600;
+  border-color: #F94892;
+  box-shadow: 0 0 1rem #F94892;
 }
 
 kbd {
@@ -45,7 +49,9 @@ kbd {
 
 .sound {
   font-size: 1.2rem;
+  font-family: 'DynaPuff', cursive;
   text-transform: uppercase;
   letter-spacing: .1rem;
-  color: #ffc600;
+  color: #F94892
 }
+

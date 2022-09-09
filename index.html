@@ -58,6 +58,29 @@
   <audio data-key="76" src="sounds/tink.wav"></audio>
 
 <script>
+  
+  function playSound(e) {
+    //checking for an audio element on page that matches datakey of 65/attribute selector
+    const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
+    const key = document.querySelector(`.key[data-key="${e.keyCode}"]`);
+    if(!audio)return; //stops function from running if there no audio
+    audio.currentTime = 0; // allows sound bite to be played over before loop duration is over
+    audio.play(); 
+    key.classList.add('playing'); 
+  };
+  
+  //triggers a transformation at end of listening event
+  function removeTransition(e) {
+    if(e.propertyName !=='transform') return; //
+    this.classList.remove('playing');
+  }
+  
+  //Adds a event listener to each key so when sound transition ends the border hightlighting ends with it
+  const keys = document.querySelectorAll('.key');
+  keys.forEach(key => key.addEventListener('transitionend', removeTransition) )
+  
+  //function that connects audio element datakey to div key produce a listening event called "keydown", so when someone hits the key down it will play a corresponding sound
+  window.addEventListener('keydown', playSound);
 
 </script>
 
